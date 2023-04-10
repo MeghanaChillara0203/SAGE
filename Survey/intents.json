@@ -1,0 +1,59 @@
+{"intents":  [
+    {"tag": "Hello's", 
+    "patterns": ["hello", "hi", "whats up", "hey", "sup", "yo", "How are you"], 
+    "responses":["Hello!", "Hi!", "What can I do for you?", "Hey!"] }, 
+
+    {"tag": "Goodbye's", 
+    "patterns": ["Bye", "Goodbye", "Done", "see you", "later"], 
+    "responses":["Goodbye!", "Bye!"] }, 
+
+    {"tag": "About me", 
+    "patterns": ["What is your name", "who are you", "what do I call you"], 
+    "responses":["I am SAGE, the Sustainable Advisory & Guidance Expert"] },
+    
+    {"tag": "Budget", 
+    "patterns": ["Tell me about the budget options", "explain the budget options", "What does the low, middle, high refer too?"], 
+    "responses":["Low Budget: I cannot be spending extra money right now \nMiddle Budget: I can spend a bit of money right now \nHigh Budget: I can afford to spend some money right now"] }, 
+
+    {"tag": "Home", 
+    "patterns": ["Tell me about the Home options", "what does it mena by rent or own?"], 
+    "responses":["The options 'rent or own' reffer to weather or not you own the place you are currently living, or if you are renting the place you are currently living "] }, 
+
+    {"tag": "Area", 
+    "patterns": ["Tell me about the budget options", "explain the budget options", "What does the low, middle, high refer too?"], 
+    "responses":["Low Budget: I cannot be spending extra money right now \nMiddle Budget: I can spend a bit of money right now \nHigh Budget: I can afford to spend some money right now"] },
+    
+    {"tag": "Diet", 
+    "patterns": ["Tell me about the Diet options", "explain the diet options", "What does vegan, vegitarina, pescatarian, omnivore mean"], 
+    "responses":["Vegan: A vegan diet is a plant-based diet that excludes all animal products and byproducts, including meat, fish, dairy, eggs, and honey. Vegans consume a variety of fruits, vegetables, legumes, grains, nuts, and seeds.\n Vegetarian: A vegetarian diet excludes meat, fish, and poultry but may include some animal byproducts such as dairy, eggs, and honey. Some vegetarians also avoid products that are made with animal-derived ingredients such as gelatin. \nPescatarian: A pescatarian diet is similar to a vegetarian diet, but includes fish and seafood. Pescatarians typically exclude other animal meats like beef, pork, and chicken.\nOmnivore: An omnivore diet includes a variety of foods, including animal products and byproducts as well as plant-based foods. Omnivores consume meat, fish, poultry, dairy, eggs, fruits, vegetables, legumes, grains, nuts, and seeds. "] }, 
+
+    {"tag": "Transportation", 
+    "patterns": ["Explain the transportation options", "what doe sit mean by transportaiton options"], 
+    "responses":["The tranportation options reffer to your primary mode of transportaion"] },
+
+    {"tag": "Compost", 
+    "patterns": [""], 
+    "responses":[""] }, 
+
+    {"tag": "Recycle", 
+    "patterns": [""], 
+    "responses":[""] }, 
+
+    {"tag": "Zero Waste", 
+    "patterns": [""], 
+    "responses":[""] },
+
+    {"tag": "Shop Local", 
+    "patterns": [""], 
+    "responses":[""] }, 
+
+    {"tag": "Food Production", 
+    "patterns": [""], 
+    "responses":[""] },
+
+    {"tag": "Consumerism", 
+    "patterns": [""], 
+    "responses":[""] }
+
+
+]}
