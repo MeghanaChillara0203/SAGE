@@ -16,6 +16,26 @@
             ]
         },
         {
+            "tag": "sustainablility",
+            "patterns": [
+                "What is sustainability?",
+                "What does sustainability mean in terms of environmental conservation and social responsibility?",
+                "What are the key principles of sustainability?",
+                "How does sustainability relate to our daily lives and consumption habits?",
+                "Why is sustainability important for the future of our planet?",
+                "What are some common misconceptions about sustainability?",
+                "What is the relationship between sustainability and economic growth?",
+                "How can we measure sustainability and track our progress?",
+                "What are some examples of sustainable practices in various industries?",
+                "What are some challenges to achieving sustainability and how can we overcome them?",
+                "How can we promote sustainability in our communities and encourage others to adopt sustainable practices?"
+
+            ],
+            "responses": [
+                "Sustainability refers to the ability to meet our current needs without compromising the ability of future generations to meet their own needs. It involves balancing environmental, social, and economic considerations to create a more equitable and sustainable future for all. Sustainability is important for the future of our planet because it allows us to address issues like climate change, resource depletion, and social inequality, among others. By adopting sustainable practices in our daily lives, businesses, and communities, we can create a more resilient and sustainable future for ourselves and future generations."
+            ]
+        },
+        {
             "tag": "Climate Change Causes - 1",
             "patterns": [
                 "What are the primary causes of climate change?",
