@@ -44,6 +44,8 @@ def main():
         gpt_response = get_gpt_response(user_input, api_key=openai.api_key)
         print("SAGE:", gpt_response, "...")
         print("<ask me to continue for more information, or ask a new question.>")
+        
+    
 
 if __name__ == "__main__":
     main()

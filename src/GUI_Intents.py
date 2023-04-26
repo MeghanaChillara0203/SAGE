@@ -16,7 +16,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
 # Loads pre-trained model/tags from file "data.pth", Returns loaded model/tags
-def load_model_and_tags(model_path="data.pth"):
+def load_model_and_tags(model_path="data/data.pth"):
     # Load saved data
     data = torch.load(model_path)
 
@@ -56,7 +56,7 @@ def predict_intent(sentence, model, tags, tokenizer, max_length=128):
 
 
 # Reads "intents.json", return a dictionary of intents and responses.
-def get_intent_responses(intents_path="intents.json"):
+def get_intent_responses(intents_path="data/intents.json"):
     with open(intents_path, "r") as file:
         intents = json.load(file)
     intent_responses = {intent["tag"]: intent["responses"]
@@ -67,12 +67,12 @@ def get_intent_responses(intents_path="intents.json"):
 # Define GUI window, widgets, initialize ChatBot
 class ChatGUI:
     def __init__(self, master):
-        # Initilize window of GUI
+        # Initialize window of GUI
         self.master = master
         master.title("Chatbot")
-        master.geometry("600x800")
+        master.geometry("1000x800")
 
-    # DistilBertTokenizer created from  pre-trained tokenizer
+        # DistilBertTokenizer created from pre-trained tokenizer
         self.tokenizer = DistilBertTokenizer.from_pretrained(
             'distilbert-base-uncased')
         # model and tag values
@@ -81,26 +81,26 @@ class ChatGUI:
         self.intent_responses = get_intent_responses()
 
         # LOGO
-        self.logo = Image.open("logo.png")
-        self.logo = self.logo.resize((600, 200), Image.ANTIALIAS)
+        self.logo = Image.open("figs/sage.png")
+        self.logo = self.logo.resize((2560, 300), Image.ANTIALIAS)
         self.logo = ImageTk.PhotoImage(self.logo)
         self.logo_label = tk.Label(master, image=self.logo)
-        self.logo_label.pack()
+        self.logo_label.place(x=0, y=0)
 
         # Question
         self.question_label = tk.Label(master, text="Enter your question:")
-        self.question_label.pack()
+        self.question_label.place(relx=0.5, rely=0.45, anchor=tk.CENTER)
 
-        self.question_entry = tk.Entry(master)
-        self.question_entry.pack()
+        self.question_entry = tk.Entry(master, width=60)
+        self.question_entry.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
         self.question_entry.bind('<Return>', self.chat)
 
         # Chatbot responses
         self.answer_label = tk.Label(master, text="Chatbot response:")
-        self.answer_label.pack()
+        self.answer_label.place(relx=0.5, rely=0.55, anchor=tk.CENTER)
 
-        self.answer_text = tk.Text(master, height=20, width=80, wrap=tk.WORD)
-        self.answer_text.pack()
+        self.answer_text = tk.Text(master, height=10, width=80, wrap=tk.WORD)
+        self.answer_text.place(relx=0.5, rely=0.7, anchor=tk.CENTER)
 
         self.scrollbar = tk.Scrollbar(master, command=self.answer_text.yview)
         self.scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
@@ -108,7 +108,7 @@ class ChatGUI:
 
         # Exit
         self.quit_button = tk.Button(master, text="Exit", command=master.quit)
-        self.quit_button.pack(side=tk.BOTTOM)
+        self.quit_button.place(relx=0.5, rely=0.9, anchor=tk.CENTER)
 
     def chat(self, event):
         # Grab quesiotn form text box

@@ -1,7 +1,13 @@
-all: train chat gui
+all: train chat
 
 train:
-	python -B train.py
+	python -B src/train.py
 
 chat:
-	python -B GUI.py
+	python -B src/GUI_Intents.py
+
+gpt:
+	python -B src/gpt.py
+
+gptui:
+	python -B src/GPT_GUI.py

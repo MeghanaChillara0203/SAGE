@@ -13,11 +13,27 @@ Requirements:
 - pillow
 - openai
 
-To Train: Run python train.py
+To Train: 
+## To Run the chatbot ( with OpenAi API)
+``` 
+make all
+```
+To run it in multiple steps:
+### First train the Bot
+```
+make train
+```
 
-To Chat: Run python GUI.py
+### Run the ChatBot
+```
+make chat
+```
 
-To do Both: run make
+## To check the gpt version of our chatbot
+```
+make gptui
+```
+
 
 # About
 

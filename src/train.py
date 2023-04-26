@@ -15,7 +15,7 @@ from transformers import DistilBertTokenizer, DistilBertForSequenceClassificatio
 
 
 # Get path to out intents.json file (training data for SAGE)
-intents_path = os.path.abspath("intents.json")
+intents_path = os.path.abspath("data/intents.json")
 
 # Open and read file/ load as dictoinary
 with open(intents_path, "r") as file:
@@ -133,7 +133,7 @@ data = {
 }
 
 # Save model state and tags
-FILE = "data.pth"
+FILE = "data/data.pth"
 torch.save(data, FILE)
 
 print(f'training complete. file saved to {FILE}')
