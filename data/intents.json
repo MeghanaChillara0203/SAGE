@@ -1054,8 +1054,7 @@
             "patterns": [
                 "Thank you",
                 "Thanks",
-                "I appreciate it",
-                "That's helpful"
+                "I appreciate it"
             ],
             "responses": [
                 "You're welcome! If you have any more questions, feel free to ask",
