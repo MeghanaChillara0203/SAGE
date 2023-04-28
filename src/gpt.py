@@ -5,6 +5,10 @@ import openai
 
 # this key is for cs5100 final project demo purposes only and will be turned off after April 2023
 openai.api_key = "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"
+# 2024-04-27 note: when this repo was made public to turn in our project,
+# the above key was disabled by OpenAI. If you wish to use this code to test,
+# you will need to contact Zach N for a new key or create your own OpenAI account
+# and obtain your own API key.
 
 # gpt-3.5-turbo is one of GPT's latest, more reliable and cost-effective models
 # tokens determine the length of the response
@@ -44,8 +48,8 @@ def main():
         gpt_response = get_gpt_response(user_input, api_key=openai.api_key)
         print("SAGE:", gpt_response, "...")
         print("<ask me to continue for more information, or ask a new question.>")
-        
-    
+
+
 
 if __name__ == "__main__":
     main()
