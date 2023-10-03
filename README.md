@@ -51,4 +51,4 @@ When this is run you should see a GUI pop up. The GUI will have a logo, a questi
 
 If you type a question into the text box and hit enter you should see the question disappear and SAGE's response to that question come into the answer box. If you hit exit, you should see the GUI exit.
 
-# Additional Notes
+
