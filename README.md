@@ -1,5 +1,5 @@
 # SAGE the AI Chatbot
-# Authors: Meghana Chillara, Zach Nichols, Tina Puzzo
+# Authors: Meghana Chillara, Zach Nichols, Tina Puzzo xx
 Date: April 2023
 
 # Steps to compile and run code:
