@@ -82,7 +82,7 @@ class ChatGUI:
 
         # LOGO
         self.logo = Image.open("figs/sage.png")
-        self.logo = self.logo.resize((1000, 200), Image.ANTIALIAS)
+        self.logo = self.logo.resize((1000, 200), Image.LANCZOS)
         self.logo = ImageTk.PhotoImage(self.logo)
         self.logo_label = tk.Label(master, image=self.logo)
         self.logo_label.place(x=0, y=0)
