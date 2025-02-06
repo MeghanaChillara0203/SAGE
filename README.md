@@ -1,54 +1,127 @@
-# SAGE the AI Chatbot
-# Authors: Meghana Chillara, Zach Nichols, Tina Puzzo 
-Date: April 2023
+### **SAGE: AI-Powered Sustainability Chatbot**  
 
-# Steps to compile and run code:
+SAGE (**Sustainable Advisory & Guidance Expert**) is an **AI-powered chatbot** designed to provide intelligent insights on sustainability. This project features **two versions** of SAGE:  
 
-Requirements:
+- **DistilBERT-Based Chatbot:** Utilizes **intent recognition and NLP** for structured responses.  
+- **GPT-Powered Chatbot:** Leverages **OpenAI’s GPT-3.5 API** to generate dynamic, context-aware answers.  
 
-- Python 3.6 or above
-- PyTorch
-- Transformers
-- tkinter
-- pillow
-- openai
+By comparing both versions, we analyze their **accuracy, response quality, and effectiveness** in aiding sustainability decision-making.  
 
-To Train: 
-## To Run the chatbot ( with OpenAi API)
-``` 
+🌍 Whether you're exploring **eco-friendly solutions**, **carbon footprints**, or **sustainable lifestyle choices**, SAGE has you covered!  
+
+---
+
+## **Setup & Requirements**  
+
+### **Prerequisites**  
+Ensure you have the following dependencies installed:  
+
+- ✅ **Python 3.6+**  
+- ✅ **PyTorch** – NLP and deep learning models  
+- ✅ **Transformers** – Advanced AI language processing  
+- ✅ **tkinter** – GUI framework for chatbot interaction  
+- ✅ **pillow** – Image processing for GUI elements  
+- ✅ **openai** – GPT-powered chatbot integration  
+
+---
+
+## **How to Compile & Run SAGE**  
+
+### **Running the Chatbot with OpenAI API**  
+For an all-in-one execution, use:  
+```bash
 make all
 ```
-To run it in multiple steps:
-### First train the Bot
-```
+
+### **Step-by-Step Execution**  
+
+#### **1️⃣ Train the DistilBERT Chatbot**  
+Before running SAGE, train the NLP-based chatbot:  
+```bash
 make train
 ```
 
-### Run the ChatBot
-```
+#### **2️⃣ Launch the DistilBERT Chatbot**  
+Once trained, start the interactive chatbot:  
+```bash
 make chat
 ```
 
-## To check the gpt version of our chatbot
-```
+#### **3️⃣ Use the GPT-Powered Chatbot**  
+To test the **ChatGPT-enhanced** version of SAGE:  
+```bash
 make gptui
 ```
 
+---
 
-# About
+## **How SAGE Works**  
 
-SAGE stands for "Sustainable Advisory & Guidance Expert". SAGE is a simple chatbot program that uses the DistilBERT model for natural language processing. SAGE can answer questions related to sustainability.
+SAGE operates in two modes:  
 
-The program uses a combination of natural language processing (NLP) and machine learning techniques to create an interactive chatbot that can simulate a conversation about sustainability.
+🔹 **DistilBERT Chatbot:**  
+  - Loads a **pre-trained model** and predefined **intent-response pairs**.  
+  - Uses NLP classification to **predict user intent** and generate responses.  
+  - Provides **structured, rule-based answers**.  
 
-# How the program works:
+🔹 **GPT-Powered Chatbot:**  
+  - Uses **OpenAI’s GPT-3.5 API** to process natural language queries.  
+  - Generates **context-aware, dynamic responses** based on user input.  
+  - Enhances conversation flow with **AI-driven reasoning and deeper insights**.  
 
-When you run make the program will load our pre-trained machine learning model and the file containing pre-defined intent/response pairs for the SAGE, and will initialize the GUI. When a user types a question and presses enter, SAGE uses the model to predict the user's intent, and based on that will generate a response to give.
+By comparing the two models, SAGE explores the advantages of **rule-based AI** vs. **deep learning-based conversational AI** in addressing **sustainability queries**.  
 
-# What you should see when you run:
+---
 
-When this is run you should see a GUI pop up. The GUI will have a logo, a question entry box, an answer text box, a scrollbar, and a button to exit.
+## **User Experience & Expected Output**  
 
-If you type a question into the text box and hit enter you should see the question disappear and SAGE's response to that question come into the answer box. If you hit exit, you should see the GUI exit.
+🖥️ **Graphical Interface:**  
+- A **user-friendly** chatbot window 
+
+💬 **Interacting with SAGE:**  
+- **Type a question & hit enter** → Your query disappears, and SAGE provides an AI-generated response.  
+- **Click "Exit"** → The chatbot closes gracefully.  
+
+
+🤖 **GPT Mode Features:**  
+- Handles **complex and open-ended queries** better than the DistilBERT model.  
+- Generates **long-form, contextual answers** based on AI training data.  
+- Uses **real-time GPT interaction** instead of predefined responses.  
+
+---
+
+## **Key Insights & Findings**  
+
+📌 **Comparison of DistilBERT & GPT Models**  
+
+| Feature                  | DistilBERT Chatbot | GPT-3.5 Chatbot |
+|--------------------------|-------------------|-----------------|
+| **Response Type**        | Rule-based        | Contextual & Dynamic |
+| **Accuracy**             | High for structured queries | Adaptive & evolving |
+| **Training Needed?**     | Yes (pre-trained NLP model) | No (API-based AI) |
+| **Best Use Case**        | Quick predefined answers | Deep, AI-driven explanations |
+
+🎯 **SAGE in Action:**  
+- 🟢 **Answered sustainability queries** effectively using **both AI techniques**.  
+- 🟢 **Compared response accuracy & quality** through user testing.  
+- 🟢 **Validated AI's role in sustainability guidance** by analyzing user interactions.  
+
+---
+
+## **Why SAGE Matters**  
+- 🌍 **Sustainability-Focused:** AI-powered insights on eco-friendly solutions.  
+- 🤖 **Machine Learning at Work:** Combines **intent recognition, NLP, and GPT AI** for better understanding.  
+- 🎯 **User-Centric Design:** A clean, intuitive chatbot experience with **two AI models for comparison**.  
+
+SAGE is more than just a chatbot—it’s a demonstration of **AI’s evolving role in sustainability education and decision-making**. 🌱💡  
+
+---
+
+🔹 **Ready to explore AI-driven sustainability? Run SAGE today!** 🚀  
+
+---
+
+#### **Authors:** Meghana Chillara, Zach Nichols, Tina Puzzo  
+📅 **Date:** April 2023  
 
 
