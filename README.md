@@ -1,7 +1,5 @@
 # **SAGE: AI-Powered Sustainability Chatbot**  
 
----
-
 SAGE (**Sustainable Advisory & Guidance Expert**) is an **AI-powered chatbot** providing intelligent insights on sustainability. It offers **two chatbot versions**:  
 
 - **DistilBERT-Based Chatbot:** Uses **intent recognition and NLP** for structured responses.  
@@ -79,8 +77,6 @@ make chat
 make gptui
 ```
 
-
-
 ## **📈 Training Performance & Model Insights**  
 I did 10 epochs, but you can try doing them from 5 to 7. to reduce time.
 ### **📊 Training Results (DistilBERT Model)**
@@ -100,7 +96,7 @@ I did 10 epochs, but you can try doing them from 5 to 7. to reduce time.
 🔹 **Training Screenshot:**  
 ![Training Screenshot](figs/training.png)  
 
----
+
 
 ## **🔬 Understanding the Results**  
 
@@ -109,7 +105,6 @@ I did 10 epochs, but you can try doing them from 5 to 7. to reduce time.
 📌 **Final accuracy: ~99%**, indicating **optimal chatbot readiness**  
 📌 **Overfitting prevention:** No additional training required  
 
----
 
 ## **🤖 How SAGE Works**  
 
@@ -125,7 +120,7 @@ I did 10 epochs, but you can try doing them from 5 to 7. to reduce time.
 🔹 Handles **open-ended, complex questions**  
 🔹 Requires an **active internet connection & API key**  
 
----
+
 
 ## **🧠 Comparison: DistilBERT vs. GPT**  
 
@@ -138,7 +133,6 @@ I did 10 epochs, but you can try doing them from 5 to 7. to reduce time.
 
 By comparing the two models, SAGE explores the advantages of **rule-based AI** vs. **deep learning-based conversational AI** in addressing **sustainability queries**.  
 
----
 
 ## **User Experience & Expected Output**  
 
