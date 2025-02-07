@@ -20,7 +20,7 @@ This project compares **accuracy, response quality, and effectiveness** in aidin
 
 ### **2️⃣ GPT-Powered Chatbot (OpenAI API)**
 
-<img src="figs/gptchatbot.png" alt="GPT Chatbot" width="500">
+<img src="figs/gptchatbot.png" alt="GPT Chatbot" width="500" height="500">
 
 
 ### **3️⃣ Model Comparison: DistilBERT vs. GPT**
