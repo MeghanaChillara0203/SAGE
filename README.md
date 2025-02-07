@@ -25,7 +25,7 @@ This project compares **accuracy, response quality, and effectiveness** in aidin
 
 ### **3️⃣ Model Comparison: DistilBERT vs. GPT**
 
-<img src="figs/sagevsgpt.png" alt="DistilBERT vs GPT" width="300" height="500">
+<img src="figs/sagevsgpt.png" alt="DistilBERT vs GPT" width="600" height="500">
 
 
 ## **🚀 Setup & Installation**  
