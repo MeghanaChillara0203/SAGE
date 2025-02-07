@@ -14,13 +14,13 @@ This project compares **accuracy, response quality, and effectiveness** in aidin
 ## **📸 Chatbot Interfaces**  
 
 ### **1️⃣ DistilBERT AI Chatbot (Intent-Based)**
-![DistilBERT Chatbot](images/aichatbot.png)  
+![DistilBERT Chatbot](figs/aichatbot.png)  
 
 ### **2️⃣ GPT-Powered Chatbot (OpenAI API)**
-![GPT Chatbot](images/gptchatbot.png)  
+![GPT Chatbot](figs/gptchatbot.png)  
 
 ### **3️⃣ Model Comparison: DistilBERT vs. GPT**
-![Chatbot Comparison](images/comparison.png)  
+![Chatbot Comparison](figs/comparison.png)  
 
 
 ## **🚀 Setup & Installation**  
