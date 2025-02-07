@@ -41,7 +41,71 @@
             "patterns": [],
             "responses": ["I'm sorry, I don't understand. Can you please rephrase your question?"]
         },
-    
+        {
+            "tag": "carbon_footprint_reduction",
+            "patterns": [
+                "How can I reduce my carbon footprint?",
+                "Help me reduce my carbon footprint.",
+                "How do I change my lifestyle to reduce my carbon footprint?",
+                "What lifestyle changes can I make to lower my carbon footprint?",
+                "How do I live a more carbon-neutral lifestyle?",
+                "What are the most effective ways to cut down my carbon footprint daily?"
+            ],
+            "responses": [
+                "You can reduce your carbon footprint by using energy-efficient appliances, driving less or switching to an electric vehicle, eating more plant-based foods, reducing waste, and choosing renewable energy sources for your home.",
+                "To lower your carbon footprint, consider cutting down on single-use plastics, conserving water, using public transport, biking or walking instead of driving, and minimizing air travel.",
+                "Changing your lifestyle to reduce carbon emissions can include switching to LED lighting, reducing food waste, composting, shopping sustainably, and supporting businesses that prioritize eco-friendly practices.",
+                "Adopting a carbon-neutral lifestyle involves making mindful choices such as reducing energy consumption, avoiding fast fashion, growing your own food, and switching to green energy providers.",
+                "One of the best ways to lower your carbon footprint is to adopt a plant-based diet, reduce meat and dairy consumption, and buy locally grown food to cut transportation emissions.",
+                "Small daily changes such as unplugging unused electronics, washing clothes in cold water, and air-drying laundry can significantly reduce energy use and lower your carbon footprint."
+            ]
+        },
+        {
+            "tag": "carbon_footprint",
+            "patterns": [
+                "What is a carbon footprint?",
+                "How do I calculate my carbon footprint?",
+                "Why is it important to reduce my carbon footprint?",
+                "What contributes the most to my carbon footprint?",
+                "How does transportation affect my carbon footprint?",
+                "What are some ways to reduce my carbon footprint?",
+                "How does food consumption impact my carbon footprint?",
+                "What is the average carbon footprint of a person?",
+                "How does my home energy usage affect my carbon footprint?",
+                "What is the relationship between carbon footprint and climate change?",
+                "How does deforestation contribute to carbon footprint?",
+                "What are carbon offsets and how do they work?",
+                "What is the carbon footprint of different types of diets?",
+                "What are some tools to measure my carbon footprint?",
+                "What industries contribute the most to carbon emissions?",
+                "How can businesses reduce their carbon footprint?",
+                "What role do renewable energy sources play in lowering carbon footprints?",
+                "How can I travel more sustainably to lower my carbon footprint?",
+                "What are the benefits of reducing my carbon footprint?",
+                "What policies are in place to reduce global carbon footprints?"
+            ],
+            "responses": [
+                "A carbon footprint refers to the total amount of greenhouse gases, primarily carbon dioxide, that an individual, organization, or product generates through daily activities, energy use, and consumption.",
+                "You can calculate your carbon footprint by assessing your energy use, transportation habits, diet, and consumption patterns. Online calculators such as the EPA Carbon Footprint Calculator or the Global Footprint Network tool can help estimate it.",
+                "Reducing your carbon footprint is important for mitigating climate change, decreasing pollution, conserving natural resources, and ensuring a sustainable future.",
+                "The biggest contributors to carbon footprints include fossil fuel consumption (driving cars, flying, heating homes), industrial production, agriculture, and deforestation.",
+                "Using public transportation, walking, biking, reducing air travel, and driving electric or fuel-efficient vehicles can significantly lower your carbon footprint.",
+                "Food production, especially livestock farming, contributes to greenhouse gas emissions. Eating more plant-based foods, reducing food waste, and buying locally sourced foods can lower your carbon footprint.",
+                "The average carbon footprint per person varies by country but is around 4.8 metric tons per year globally. In developed countries, it is much higher.",
+                "Switching to renewable energy, using energy-efficient appliances, and adopting sustainable home habits like insulating buildings and turning off unused devices can reduce your home’s carbon footprint.",
+                "Carbon footprints contribute to climate change by increasing greenhouse gas concentrations in the atmosphere, leading to global warming and extreme weather conditions.",
+                "Deforestation reduces the Earth's ability to absorb CO2, leading to higher atmospheric carbon levels and worsening climate change.",
+                "Carbon offsets allow individuals and businesses to invest in environmental projects that absorb or reduce carbon emissions, such as reforestation or renewable energy programs.",
+                "Diets that include high meat and dairy consumption have larger carbon footprints due to methane emissions from livestock and land use changes. A plant-based diet has a significantly lower carbon footprint.",
+                "You can use tools like the Carbon Footprint Calculator, CoolClimate Network, or UN Carbon Footprint Calculator to assess and manage your emissions.",
+                "Industries with the highest carbon footprints include energy production, transportation, agriculture, and heavy manufacturing.",
+                "Businesses can reduce their carbon footprint by improving energy efficiency, switching to renewable energy, reducing waste, optimizing supply chains, and implementing sustainable practices.",
+                "Renewable energy sources like solar, wind, and hydroelectric power reduce reliance on fossil fuels, significantly cutting carbon emissions.",
+                "To travel sustainably, consider using public transportation, carpooling, biking, flying less, and choosing airlines with carbon offset programs.",
+                "Reducing your carbon footprint helps lower energy costs, improve air quality, slow climate change, and protect biodiversity.",
+                "Global efforts such as the Paris Agreement, carbon taxes, and emissions trading schemes aim to reduce carbon footprints and transition to a low-carbon economy."
+            ]
+        },                
         {
             "tag": "Climate Change Causes - 1",
             "patterns": [
@@ -998,6 +1062,586 @@
             "responses": [
                 "Contribute to the circular economy by buying products made from recycled materials, repairing and upcycling items, sharing or renting products, and recycling or composting waste",
                 "To contribute to the circular economy, you can start by understanding the concept and its importance in reducing waste and creating a more sustainable future. Reducing waste and promoting reuse in your daily life through practices such as using reusable containers or composting is also effective. Recycling and properly disposing of materials to contribute to the circular economy through practices such as recycling paper or properly disposing of hazardous materials is also important. Choosing products made with sustainable and recyclable materials to support the circular economy through selecting products with minimal packaging or made with recycled materials is also effective. Repairing or repurposing items to reduce waste and contribute to the circular economy through repairing clothing or repurposing furniture is also important. Supporting companies with circular economy initiatives or circular business models through researching company practices or purchasing from companies with eco-friendly initiatives is also effective. Promoting circular economy practices in your community or workplace through sharing information or advocating for circular initiatives is also important. Reducing the carbon footprint of your consumption habits to support the circular economy through choosing eco-friendly options or reducing your energy usage is also effective. Reducing plastic usage and supporting the circular economy through choosing plastic-free options or using reusable containers is also important. Advocating for policy changes that promote the circular economy and reduce waste through contacting local representatives or supporting environmental organizations is also important."
+            ]
+        },
+        {
+            "tag": "carbon_footprint",
+            "patterns": [
+                "What is a carbon footprint?",
+                "How can I reduce my carbon footprint?",
+                "Why is my carbon footprint important?",
+                "What activities increase carbon footprints?",
+                "What is the average carbon footprint per person?"
+            ],
+            "responses": [
+                "Your carbon footprint measures the greenhouse gases you generate through daily activities like travel, diet, and energy use. Reducing it involves using public transport, eating sustainably, and conserving energy.",
+                "Lower your carbon footprint by using energy-efficient appliances, reducing waste, flying less, and supporting renewable energy sources.",
+                "Everything from driving a car to the food you eat contributes to your carbon footprint. Small changes like choosing plant-based meals and biking instead of driving can make a difference."
+            ]
+        },
+        {
+            "tag": "sustainable_transportation",
+            "patterns": [
+                "How can I travel more sustainably?",
+                "What are the most eco-friendly transportation methods?",
+                "How can I reduce my travel emissions?",
+                "Are electric vehicles really better for the environment?",
+                "What is sustainable commuting?"
+            ],
+            "responses": [
+                "Sustainable transportation includes biking, walking, carpooling, using public transit, and switching to electric or hybrid vehicles.",
+                "Electric cars produce fewer emissions over their lifetime compared to gasoline-powered cars, especially when charged with renewable energy.",
+                "Reducing your travel emissions means choosing fuel-efficient transport, using alternative energy sources, and minimizing unnecessary trips."
+            ]
+        },
+        {
+            "tag": "green_buildings",
+            "patterns": [
+                "What makes a building sustainable?",
+                "What is a green building?",
+                "How can I make my home more energy-efficient?",
+                "Are there benefits to green architecture?",
+                "What materials are used in eco-friendly buildings?"
+            ],
+            "responses": [
+                "Green buildings use energy-efficient designs, sustainable materials, and renewable energy to minimize environmental impact.",
+                "Sustainable homes incorporate solar panels, efficient insulation, water-saving fixtures, and smart technology to reduce energy consumption.",
+                "Green architecture benefits both the environment and your wallet by lowering utility costs and reducing carbon emissions."
+            ]
+        },
+        {
+            "tag": "sustainable_tech",
+            "patterns": [
+                "What is sustainable technology?",
+                "How does technology help the environment?",
+                "Are smart homes more eco-friendly?",
+                "What are some examples of green technology?",
+                "How can AI support sustainability?"
+            ],
+            "responses": [
+                "Sustainable technology includes innovations that reduce environmental impact, like solar panels, smart grids, and energy-efficient appliances.",
+                "AI can support sustainability by optimizing energy use, reducing waste, and improving resource management in industries like agriculture and transport.",
+                "Smart homes with automated lighting, thermostats, and water-saving systems can significantly reduce energy and resource consumption."
+            ]
+        },
+        {
+            "tag": "green_jobs",
+            "patterns": [
+                "What are green jobs?",
+                "How can I start a career in sustainability?",
+                "Are there high-paying sustainability jobs?",
+                "What skills do I need for an eco-friendly career?",
+                "What industries have the most green jobs?"
+            ],
+            "responses": [
+                "Green jobs focus on environmental conservation and sustainability, including careers in renewable energy, conservation, and sustainable business.",
+                "Skills like environmental science, renewable energy expertise, and policy knowledge are valuable for sustainability careers.",
+                "Industries like renewable energy, waste management, sustainable agriculture, and eco-friendly manufacturing are growing in green job opportunities."
+            ]
+        },
+        {
+            "tag": "eco_tourism",
+            "patterns": [
+                "What is eco-tourism?",
+                "How can I travel without harming the environment?",
+                "Are there sustainable travel destinations?",
+                "What are eco-friendly travel habits?",
+                "How does tourism impact the environment?"
+            ],
+            "responses": [
+                "Eco-tourism focuses on traveling responsibly, minimizing environmental impact, and supporting local communities.",
+                "Sustainable travel means choosing eco-friendly hotels, using public transport, and respecting local cultures and wildlife.",
+                "Tourism can harm ecosystems, but responsible travel choices like avoiding single-use plastics and supporting conservation efforts help."
+            ]
+        },
+        {
+            "tag": "sustainable_investing",
+            "patterns": [
+                "What is sustainable investing?",
+                "How can I invest in green companies?",
+                "What are ESG investments?",
+                "Are sustainable funds profitable?",
+                "What companies follow sustainable business practices?"
+            ],
+            "responses": [
+                "Sustainable investing focuses on companies that prioritize environmental, social, and governance (ESG) factors.",
+                "Green investing means supporting businesses that use renewable energy, reduce carbon emissions, and follow ethical labor practices.",
+                "Sustainable funds can be profitable while promoting social and environmental responsibility."
+            ]
+        },
+        {
+            "tag": "sustainable_fashion",
+            "patterns": [
+                "What is sustainable fashion?",
+                "How can I build an eco-friendly wardrobe?",
+                "Are thrift stores sustainable?",
+                "What fabrics are best for the environment?",
+                "What is slow fashion?"
+            ],
+            "responses": [
+                "Sustainable fashion focuses on ethical production, eco-friendly materials, and reducing textile waste.",
+                "Thrift stores and second-hand clothing reduce waste and extend the life cycle of fashion items.",
+                "Slow fashion prioritizes quality, longevity, and fair labor practices over mass-produced fast fashion."
+            ]
+        },
+        {
+            "tag": "circular_economy",
+            "patterns": [
+                "What is the circular economy?",
+                "How does a circular economy work?",
+                "What are examples of circular economy products?",
+                "How can businesses adopt a circular economy model?",
+                "What is the difference between a linear and circular economy?"
+            ],
+            "responses": [
+                "The circular economy reduces waste by reusing, recycling, and repurposing materials instead of disposing of them.",
+                "Unlike the linear 'take-make-dispose' model, the circular economy ensures that products have extended life cycles through repair, upcycling, and sustainable sourcing.",
+                "Examples of circular economy practices include refurbished electronics, upcycled fashion, and compostable packaging."
+            ]
+        },
+        {
+            "tag": "sustainable_food_production",
+            "patterns": [
+                "What is sustainable farming?",
+                "How does agriculture impact climate change?",
+                "What are regenerative farming practices?",
+                "How can I support sustainable agriculture?",
+                "What are the benefits of organic farming?"
+            ],
+            "responses": [
+                "Sustainable farming focuses on soil health, reduced pesticide use, and biodiversity conservation to produce food with minimal environmental harm.",
+                "Regenerative agriculture restores soil fertility and improves water retention, reducing the need for chemical fertilizers.",
+                "Supporting local farmers, choosing organic, and reducing food waste are great ways to promote sustainable agriculture."
+            ]
+        },
+        {
+            "tag": "sustainable_education",
+            "patterns": [
+                "What is environmental education?",
+                "How can schools teach sustainability?",
+                "Are there sustainability courses online?",
+                "What are the best books on sustainability?",
+                "How do children learn about sustainability?",
+                "Why is sustainability education important?"
+            ],
+            "responses": [
+                "Environmental education teaches individuals how natural systems work and how human activity affects them.",
+                "Sustainability can be taught through school programs, hands-on activities, and integrating eco-conscious habits.",
+                "There are many online sustainability courses, such as those on Coursera, edX, and FutureLearn."
+            ]
+        },
+        {
+            "tag": "sustainable_business",
+            "patterns": [
+                "How can businesses be more sustainable?",
+                "What are sustainable business practices?",
+                "Are there certifications for sustainable businesses?",
+                "How does sustainability affect a company’s profits?",
+                "What industries have the most sustainable businesses?",
+                "How can small businesses implement sustainability?"
+            ],
+            "responses": [
+                "Businesses can reduce waste, lower carbon footprints, and source ethical materials to be more sustainable.",
+                "Sustainable business practices include zero-waste policies, renewable energy use, and ethical sourcing.",
+                "Certifications like B Corp, Fair Trade, and LEED indicate a company's commitment to sustainability."
+            ]
+        },
+        {
+            "tag": "eco_vehicles",
+            "patterns": [
+                "What are the most fuel-efficient cars?",
+                "Are electric cars truly better for the environment?",
+                "How do hybrid cars help reduce emissions?",
+                "What is regenerative braking in electric cars?",
+                "Are hydrogen fuel cell vehicles sustainable?",
+                "What are the challenges of electric cars?"
+            ],
+            "responses": [
+                "Electric and hybrid vehicles reduce emissions and reliance on fossil fuels compared to gasoline-powered cars.",
+                "Regenerative braking allows electric cars to recover energy when braking, increasing efficiency.",
+                "Hydrogen fuel cell vehicles produce only water as a byproduct, making them an exciting alternative."
+            ]
+        },
+        {
+            "tag": "sustainable_gardening",
+            "patterns": [
+                "What is permaculture gardening?",
+                "How can I start a zero-waste garden?",
+                "What plants require the least water?",
+                "How does composting improve soil health?",
+                "What are the best alternatives to chemical pesticides?",
+                "How can I garden in an urban space?"
+            ],
+            "responses": [
+                "Permaculture gardening focuses on working with nature by creating self-sustaining ecosystems.",
+                "Drought-resistant plants like succulents and native species require less water to thrive.",
+                "Composting enriches soil with nutrients while reducing food waste."
+            ]
+        },
+        {
+            "tag": "ocean_conservation",
+            "patterns": [
+                "How can I help protect the ocean?",
+                "What are the biggest threats to marine life?",
+                "Why is plastic pollution bad for oceans?",
+                "How does overfishing impact the ocean?",
+                "What are marine protected areas?",
+                "How can I support ocean conservation?"
+            ],
+            "responses": [
+                "Protect oceans by reducing plastic use, supporting sustainable seafood, and advocating for marine protection policies.",
+                "Overfishing depletes fish populations, harming marine ecosystems and food supplies.",
+                "Marine protected areas (MPAs) help safeguard marine biodiversity by limiting harmful human activities."
+            ]
+        },
+        {
+            "tag": "climate_policies",
+            "patterns": [
+                "What laws protect the environment?",
+                "What is the Kyoto Protocol?",
+                "How does the Paris Agreement work?",
+                "Are carbon taxes effective?",
+                "What countries have the best climate policies?",
+                "How can individuals support climate policies?"
+            ],
+            "responses": [
+                "Environmental laws regulate pollution, conservation, and emissions reduction to protect ecosystems.",
+                "The Paris Agreement aims to limit global temperature rise by reducing greenhouse gas emissions.",
+                "Carbon taxes encourage businesses to lower their carbon footprint by making emissions costly."
+            ]
+        },
+        {
+            "tag": "sustainable_technology",
+            "patterns": [
+                "What is green computing?",
+                "How do smart grids work?",
+                "Are solar panels truly sustainable?",
+                "How does blockchain help sustainability?",
+                "What are biodegradable electronics?",
+                "What is the future of sustainable tech?"
+            ],
+            "responses": [
+                "Green computing focuses on reducing energy consumption and e-waste in technology.",
+                "Smart grids optimize electricity distribution and incorporate renewable energy sources.",
+                "Biodegradable electronics help reduce electronic waste by decomposing naturally."
+            ]
+        },
+        {
+            "tag": "zero_waste_living",
+            "patterns": [
+                "How can I reduce my household waste?",
+                "What are some zero-waste swaps?",
+                "Is it possible to live completely zero-waste?",
+                "What are bulk food stores?",
+                "How does minimalism relate to zero waste?",
+                "What are the best reusable alternatives?"
+            ],
+            "responses": [
+                "Zero-waste living involves reducing trash production by using reusable and compostable materials.",
+                "Bulk food stores allow shoppers to buy groceries without plastic packaging.",
+                "Minimalism and zero-waste living often overlap, emphasizing intentional consumption."
+            ]
+        },
+        {
+            "tag": "eco_friendly_events",
+            "patterns": [
+                "How can I host a sustainable event?",
+                "What are green alternatives to plastic cups?",
+                "How can weddings be more sustainable?",
+                "How do conferences reduce their carbon footprint?",
+                "What is a carbon-neutral event?",
+                "How do I find eco-friendly venues?"
+            ],
+            "responses": [
+                "Sustainable events focus on reducing waste, using eco-friendly decor, and offsetting carbon emissions.",
+                "Reusable or compostable cups and cutlery help reduce plastic waste at events.",
+                "Carbon-neutral events balance emissions by investing in sustainability projects."
+            ]
+        },
+        {
+            "tag": "sustainable_healthcare",
+            "patterns": [
+                "How can hospitals be more sustainable?",
+                "What is eco-friendly medical waste disposal?",
+                "Are there sustainable personal hygiene products?",
+                "How does climate change impact healthcare?",
+                "What are the best eco-friendly dental care products?",
+                "Can I recycle prescription medicine bottles?"
+            ],
+            "responses": [
+                "Hospitals can reduce waste by using biodegradable supplies, limiting single-use plastics, and improving energy efficiency.",
+                "Many prescription bottles can be recycled at designated drop-off locations.",
+                "Sustainable personal hygiene includes bamboo toothbrushes, reusable cotton pads, and biodegradable soaps."
+            ]
+        },
+        {
+            "tag": "sustainable_travel_hacks",
+            "patterns": [
+                "How can I travel with a lower carbon footprint?",
+                "What are some eco-friendly packing tips?",
+                "How do I find green hotels and accommodations?",
+                "What are the best sustainable tourism destinations?",
+                "How can I avoid waste while traveling?",
+                "Is it better to travel by train or plane?"
+            ],
+            "responses": [
+                "To lower your travel carbon footprint, opt for trains, buses, or carpooling over flights.",
+                "Eco-friendly packing includes bringing reusable water bottles, cutlery, and toiletries."
+            ]
+        },
+        {
+            "tag": "ethical_consumption",
+            "patterns": [
+                "What is ethical consumerism?",
+                "How can I identify ethical brands?",
+                "What are fair-trade products?",
+                "How do I know if a product is ethically sourced?",
+                "Is fast fashion unethical?",
+                "Why is buying second-hand more sustainable?"
+            ],
+            "responses": [
+                "Ethical consumerism involves purchasing products that are sustainable, fair-trade, and ethically produced.",
+                "Fair-trade products ensure workers receive fair wages and operate under ethical conditions."
+            ]
+        },
+        {
+            "tag": "eco_friendly_pets",
+            "patterns": [
+                "How can I make my pet care more sustainable?",
+                "What are eco-friendly pet food brands?",
+                "Are there biodegradable pet waste solutions?",
+                "How can I reduce my pet’s carbon footprint?",
+                "What are sustainable pet toy alternatives?",
+                "How can I adopt a zero-waste lifestyle with a pet?"
+            ],
+            "responses": [
+                "Use biodegradable poop bags and eco-friendly pet food to reduce your pet’s environmental impact.",
+                "Opt for toys made from recycled materials or natural fibers for a more sustainable pet lifestyle."
+            ]
+        },
+        {
+            "tag": "sustainable_home_office",
+            "patterns": [
+                "How can I create a green home office?",
+                "What are the best energy-efficient office gadgets?",
+                "How can I reduce waste while working from home?",
+                "What are sustainable office supply alternatives?",
+                "How does working remotely help the environment?",
+                "What are some paperless office tips?"
+            ],
+            "responses": [
+                "Create a sustainable home office by using energy-efficient devices and reducing paper waste.",
+                "Going paperless with digital documents helps cut down on unnecessary waste."
+            ]
+        },
+        {
+            "tag": "green_finance",
+            "patterns": [
+                "What is green investing?",
+                "How can I invest in eco-friendly companies?",
+                "What are ESG funds?",
+                "Are there sustainable banks?",
+                "What is the impact of divesting from fossil fuels?",
+                "How do I know if a company is truly sustainable?"
+            ],
+            "responses": [
+                "Green investing focuses on sustainable and ethical companies that prioritize environmental responsibility.",
+                "ESG (Environmental, Social, and Governance) funds help investors support responsible businesses."
+            ]
+        },
+        {
+            "tag": "circular_economy",
+            "patterns": [
+                "What is the circular economy?",
+                "How does the circular economy work?",
+                "What are examples of circular economy businesses?",
+                "How can I support circular economy initiatives?",
+                "What products follow the circular economy model?",
+                "What are the benefits of a circular economy?"
+            ],
+            "responses": [
+                "The circular economy promotes reusing, recycling, and designing waste-free products.",
+                "Supporting companies that embrace circular models helps reduce waste and conserve resources."
+            ]
+        },
+        {
+            "tag": "urban_sustainability",
+            "patterns": [
+                "How can cities become more sustainable?",
+                "What are green urban planning strategies?",
+                "How do smart cities promote sustainability?",
+                "What are sustainable building materials?",
+                "How can public transport reduce carbon emissions?",
+                "How does urban gardening help the environment?"
+            ],
+            "responses": [
+                "Sustainable cities incorporate green spaces, energy-efficient infrastructure, and public transport.",
+                "Urban gardening improves air quality, reduces heat, and provides fresh food locally."
+            ]
+        },
+        {
+            "tag": "minimalist_lifestyle",
+            "patterns": [
+                "How can minimalism help the environment?",
+                "What are the benefits of a minimalist lifestyle?",
+                "How does decluttering reduce waste?",
+                "What are some minimalist sustainability practices?",
+                "Is minimalism a form of sustainability?",
+                "How can I reduce unnecessary consumption?"
+            ],
+            "responses": [
+                "Minimalism supports sustainability by reducing waste and unnecessary consumption.",
+                "Decluttering prevents excess waste and promotes mindful purchasing habits."
+            ]
+        },
+        {
+            "tag": "eco_friendly_parenting",
+            "patterns": [
+                "How can I raise my child sustainably?",
+                "Are there eco-friendly baby products?",
+                "What are the best reusable diaper brands?",
+                "How can I reduce my baby’s carbon footprint?",
+                "What are sustainable alternatives to plastic toys?",
+                "How can I teach children about sustainability?"
+            ],
+            "responses": [
+                "Eco-friendly parenting includes using cloth diapers, wooden toys, and organic clothing.",
+                "Teaching sustainability from an early age encourages lifelong eco-conscious habits."
+            ]
+        },
+        {
+            "tag": "forest_preservation",
+            "patterns": [
+                "How can I help prevent deforestation?",
+                "What are the biggest threats to forests?",
+                "Why are rainforests important?",
+                "What products contribute to deforestation?",
+                "How does palm oil impact forests?",
+                "Are there sustainable wood alternatives?"
+            ],
+            "responses": [
+                "Support forest preservation by choosing FSC-certified wood and avoiding unsustainable palm oil products.",
+                "Rainforests play a crucial role in oxygen production, biodiversity, and climate regulation."
+            ]
+        },
+        {
+            "tag": "green_energy_storage",
+            "patterns": [
+                "How is renewable energy stored?",
+                "What are the best battery technologies for green energy?",
+                "How do smart grids work with renewable energy?",
+                "Can solar power be stored for night use?",
+                "What are sustainable alternatives to lithium batteries?",
+                "How does energy storage affect grid stability?"
+            ],
+            "responses": [
+                "Renewable energy storage includes batteries, pumped hydro, and hydrogen fuel cells.",
+                "Smart grids efficiently distribute stored renewable energy, reducing waste and costs."
+            ]
+        },
+        {
+            "tag": "sustainable_gifting",
+            "patterns": [
+                "What are sustainable gift ideas?",
+                "How can I give gifts without creating waste?",
+                "Are there eco-friendly gift-wrapping alternatives?",
+                "What are some experience-based gift ideas?",
+                "How can I choose ethical and fair-trade gifts?",
+                "Are digital gifts more sustainable?"
+            ],
+            "responses": [
+                "Sustainable gifts include experiences, second-hand items, and fair-trade products.",
+                "Wrapping gifts in reusable cloth or recycled paper reduces unnecessary waste."
+            ]
+        },
+        {
+            "tag": "plastic_alternatives",
+            "patterns": [
+                "What are the best plastic-free alternatives?",
+                "Are bioplastics truly sustainable?",
+                "How can I replace single-use plastic in my home?",
+                "What are compostable packaging options?",
+                "Is glass or metal better than plastic?",
+                "How can businesses reduce plastic packaging?"
+            ],
+            "responses": [
+                "Plastic-free alternatives include bamboo, glass, metal, and biodegradable materials.",
+                "Bioplastics can be more sustainable but require proper disposal methods."
+            ]
+        },
+        {
+            "tag": "sustainable_holidays",
+            "patterns": [
+                "How can I have an eco-friendly holiday?",
+                "What are sustainable alternatives to Christmas trees?",
+                "How can I celebrate Halloween sustainably?",
+                "Are fireworks bad for the environment?",
+                "How can I have a waste-free birthday party?",
+                "What are eco-friendly decorations?"
+            ],
+            "responses": [
+                "Eco-friendly holidays include using LED lights, compostable decorations, and reusable gift wrap.",
+                "Sustainable Christmas trees can be live potted trees that can be replanted."
+            ]
+        },
+        {
+            "tag": "sustainable_beauty",
+            "patterns": [
+                "What is sustainable beauty?",
+                "How can I make my beauty routine more eco-friendly?",
+                "Are there zero-waste beauty products?",
+                "What are the best natural skincare brands?",
+                "How can I reduce plastic waste in my beauty routine?",
+                "What are some DIY beauty recipes?"
+            ],
+            "responses": [
+                "Sustainable beauty focuses on natural ingredients, minimal packaging, and cruelty-free practices.",
+                "Zero-waste beauty products include solid shampoos, refillable containers, and reusable makeup pads."
+            ]
+        },
+        {
+            "tag": "sustainable_weddings",
+            "patterns": [
+                "How can I plan a sustainable wedding?",
+                "What are eco-friendly wedding venues?",
+                "Are there ethical wedding dress options?",
+                "How can I reduce waste at my wedding?",
+                "What are sustainable wedding favors?",
+                "How can I have a zero-waste wedding?"
+            ],
+            "responses": [
+                "Sustainable weddings include eco-friendly venues, second-hand attire, and plantable invitations.",
+                "Zero-waste weddings focus on reducing single-use items, food waste, and unnecessary decorations."
+            ]
+        },
+        {
+            "tag": "sustainable_hobbies",
+            "patterns": [
+                "What are eco-friendly hobbies?",
+                "How can I make my hobbies more sustainable?",
+                "Are there sustainable crafting materials?",
+                "What are the best zero-waste hobbies?",
+                "How can I reduce waste while gardening?",
+                "What are some eco-friendly DIY projects?"
+            ],
+            "responses": [
+                "Eco-friendly hobbies include gardening, upcycling, biking, and nature photography.",
+                "Sustainable crafting materials include recycled paper, natural fibers, and non-toxic paints."
+            ]
+        },
+        {
+            "tag": "sustainable_travel",
+            "patterns": [
+                "How can I travel sustainably?",
+                "What are eco-friendly travel destinations?",
+                "Are there sustainable travel companies?",
+                "How can I reduce my carbon footprint while traveling?",
+                "What are the best ways to offset travel emissions?",
+                "How can I support local communities while traveling?"
+            ],
+            "responses": [
+                "Sustainable travel includes choosing eco-friendly accommodations, supporting local businesses, and minimizing waste.",
+                "Offsetting travel emissions can be done through carbon offset programs or supporting renewable energy projects."
             ]
         },
         {

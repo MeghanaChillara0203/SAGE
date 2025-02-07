@@ -1,132 +1,162 @@
-"""
-GUI.py
-The interface and chatbot aspect of the program
-"""
-
-# Imports
 import tkinter as tk
+from tkinter import ttk
 from PIL import Image, ImageTk
 import json
 import random
 import torch
 from transformers import DistilBertTokenizer, DistilBertForSequenceClassification
+import time
+import os
 
-# use the available CUDA device (GPU) if available, else the CPU
+# Use CUDA if available, else CPU
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-
-# Loads pre-trained model/tags from file "data.pth", Returns loaded model/tags
+# Load pre-trained model/tags
 def load_model_and_tags(model_path="data/data.pth"):
-    # Load saved data
-    data = torch.load(model_path)
+    if not os.path.exists(model_path):
+        print("⚠️ Model file not found! Please check the path:", model_path)
+        return None, None
 
-    # create new instance of the DistilBertForSequenceClassification model
-    model = DistilBertForSequenceClassification.from_pretrained(
-        'distilbert-base-uncased', num_labels=len(data["tags"]))
-    # load saved state dictionary for the model
-    model.load_state_dict(data["model_state"])
-    # Move model
-    model.to(device)
-    # Set model to evaluation mode
-    model.eval()
+    data = torch.load(model_path, map_location=device)
 
-    # reutn model/tags
+    try:
+        model = DistilBertForSequenceClassification.from_pretrained(
+            'distilbert-base-uncased', num_labels=len(data["tags"])
+        )
+        model.load_state_dict(data["model_state"])
+        model.to(device)
+        model.eval()
+    except Exception as e:
+        print("⚠️ Error loading model:", e)
+        return None, None
+
     return model, data["tags"]
 
-
-# Predicts the intent of a given sentence using the loaded model, returns corresponding tag
+# Predict intent with rate limiting
 def predict_intent(sentence, model, tags, tokenizer, max_length=128):
-    # Tokenize input sentence
-    encoding = tokenizer(sentence, max_length=max_length,
-                         padding='max_length', truncation=True, return_tensors='pt')
-    # extract input_ids tensor from the encoding and move
+    time.sleep(1)  # Prevent overloading
+
+    if model is None or tags is None:
+        return "I'm having trouble understanding you right now."
+
+    encoding = tokenizer(sentence, max_length=max_length, padding='max_length', truncation=True, return_tensors='pt')
     input_ids = encoding['input_ids'].to(device)
-    # extract and move
     attention_mask = encoding['attention_mask'].to(device)
 
-    # save memory/ speed up inference by disabling gradient calculations
     with torch.no_grad():
-        # get outputs from inputs/mask
         outputs = model(input_ids, attention_mask=attention_mask)
-        # Get index of max val in the output logits tensor to predict
         _, predicted = torch.max(outputs.logits, 1)
 
-     # return corresponding tag
     return tags[predicted.item()]
 
-
-# Reads "intents.json", return a dictionary of intents and responses.
+# Read intents.json
 def get_intent_responses(intents_path="data/intents.json"):
+    if not os.path.exists(intents_path):
+        print("⚠️ Intents file not found! Please check:", intents_path)
+        return {}
+
     with open(intents_path, "r") as file:
         intents = json.load(file)
-    intent_responses = {intent["tag"]: intent["responses"]
-                        for intent in intents["intents"]}
-    return intent_responses
+    return {intent["tag"]: intent["responses"] for intent in intents["intents"]}
 
-
-# Define GUI window, widgets, initialize ChatBot
+# Chatbot GUI
 class ChatGUI:
     def __init__(self, master):
-        # Initialize window of GUI
         self.master = master
-        master.title("Chatbot")
-        master.geometry("1000x800")
+        master.title("SAGE AI Chatbot")
+        master.geometry("400x600")
+        master.configure(bg="white")
 
-        # DistilBertTokenizer created from pre-trained tokenizer
-        self.tokenizer = DistilBertTokenizer.from_pretrained(
-            'distilbert-base-uncased')
-        # model and tag values
+        # Load chatbot icon
+        self.bot_icon = Image.open("figs/sage.png")  # Ensure this file exists
+        self.bot_icon = self.bot_icon.resize((30, 30), Image.LANCZOS)
+        self.bot_photo = ImageTk.PhotoImage(self.bot_icon)
+
+        # Header
+        self.header = tk.Label(master, text="SAGE AI Chatbot", font=("Helvetica", 14, "bold"), fg="white", bg="#0078D4", padx=10, pady=10)
+        self.header.pack(fill="x")
+
+        # Chat Display (Bubble Messages)
+        self.chat_frame = tk.Frame(master, bg="white")
+        self.chat_frame.pack(padx=10, pady=10, fill="both", expand=True)
+
+        self.chat_canvas = tk.Canvas(self.chat_frame, bg="white", highlightthickness=0)
+        self.scrollbar = ttk.Scrollbar(self.chat_frame, command=self.chat_canvas.yview)
+        self.scrollbar.pack(side="right", fill="y")
+        self.chat_canvas.pack(side="left", fill="both", expand=True)
+        self.chat_canvas.config(yscrollcommand=self.scrollbar.set)
+
+        self.chat_box = tk.Frame(self.chat_canvas, bg="white")
+        self.chat_window = self.chat_canvas.create_window((0, 0), window=self.chat_box, anchor="nw")
+        self.chat_box.bind("<Configure>", lambda e: self.chat_canvas.configure(scrollregion=self.chat_canvas.bbox("all")))
+
+        # User Input
+        self.input_frame = tk.Frame(master, bg="white")
+        self.input_frame.pack(pady=5, fill="x", padx=10)
+
+        self.entry = ttk.Entry(self.input_frame, font=("Helvetica", 12))
+        self.entry.pack(side="left", fill="x", expand=True, padx=5, pady=5)
+        self.entry.bind("<Return>", self.chat)
+
+        self.send_button = ttk.Button(self.input_frame, text="Send", command=self.chat, style="TButton")
+        self.send_button.pack(side="right", padx=5)
+
+        # Exit Button
+        self.exit_button = ttk.Button(master, text="Exit", command=master.quit, style="TButton")
+        self.exit_button.pack(pady=5)
+
+        # Load chatbot model
+        self.tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased')
         self.model, self.tags = load_model_and_tags()
-        # Dictionary of responses for each intent in "intents.json"
         self.intent_responses = get_intent_responses()
 
-        # LOGO
-        self.logo = Image.open("figs/sage.png")
-        self.logo = self.logo.resize((1000, 200), Image.LANCZOS)
-        self.logo = ImageTk.PhotoImage(self.logo)
-        self.logo_label = tk.Label(master, image=self.logo)
-        self.logo_label.place(x=0, y=0)
+        # Chatbot greets first
+        self.display_message("SAGE", "Hi there! I'm SAGE, your AI assistant. How can I help you today?")
 
-        # Question
-        self.question_label = tk.Label(master, text="Enter your question:")
-        self.question_label.place(relx=0.5, rely=0.45, anchor=tk.CENTER)
+    def chat(self, event=None):
+        user_message = self.entry.get().strip()
+        if not user_message:
+            return
 
-        self.question_entry = tk.Entry(master, width=60)
-        self.question_entry.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
-        self.question_entry.bind('<Return>', self.chat)
+        # Display user message
+        self.display_message("You", user_message)
 
-        # Chatbot responses
-        self.answer_label = tk.Label(master, text="Chatbot response:")
-        self.answer_label.place(relx=0.5, rely=0.55, anchor=tk.CENTER)
+        # Predict bot response
+        intent = predict_intent(user_message, self.model, self.tags, self.tokenizer)
+        bot_response = random.choice(self.intent_responses.get(intent, ["I'm not sure how to respond."]))
 
-        self.answer_text = tk.Text(master, height=10, width=80, wrap=tk.WORD)
-        self.answer_text.place(relx=0.5, rely=0.7, anchor=tk.CENTER)
+        # Display bot response
+        self.display_message("SAGE", bot_response)
 
-        self.scrollbar = tk.Scrollbar(master, command=self.answer_text.yview)
-        self.scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-        self.answer_text.config(yscrollcommand=self.scrollbar.set)
+        # Clear input box after sending message
+        self.entry.delete(0, tk.END)
 
-        # Exit
-        self.quit_button = tk.Button(master, text="Exit", command=master.quit)
-        self.quit_button.place(relx=0.5, rely=0.9, anchor=tk.CENTER)
+        # Auto-scroll chat to latest message
+        self.chat_canvas.yview_moveto(1)
 
-    def chat(self, event):
-        # Grab quesiotn form text box
-        question = self.question_entry.get()
-        self.answer_text.delete('1.0', tk.END)
-        # Predict intent of the user's question
-        intent = predict_intent(question, self.model,
-                                self.tags, self.tokenizer)
-        # Randomly select response from intent responses
-        response = random.choice(self.intent_responses[intent])
-        # Give response
-        self.answer_text.insert(tk.END, response)
+    def display_message(self, sender, message):
+        """Display chat messages in a bubble format."""
 
-        # Clear the question entry widget
-        self.question_entry.delete(0, tk.END)
+        bubble_frame = tk.Frame(self.chat_box, bg="#E3F2FD" if sender == "SAGE" else "#E0E0E0", padx=10, pady=5)
+        bubble_label = tk.Label(bubble_frame, text=message, font=("Helvetica", 12), wraplength=280,
+                                bg="#E3F2FD" if sender == "SAGE" else "#E0E0E0", fg="black", justify="left")
+        
+        if sender == "SAGE":
+            # Bot's message with an icon
+            icon_label = tk.Label(bubble_frame, image=self.bot_photo, bg="#E3F2FD")
+            icon_label.pack(side="left", padx=5)
+            bubble_label.pack(side="right", padx=5)
+        else:
+            # User message
+            bubble_label.pack(side="right", padx=5)
 
+        bubble_frame.pack(anchor="w" if sender == "SAGE" else "e", pady=5)
 
-# GUI running
+        # Update chat window
+        self.chat_box.update_idletasks()
+        self.chat_canvas.configure(scrollregion=self.chat_canvas.bbox("all"))
+
+# Run GUI
 root = tk.Tk()
-my_gui = ChatGUI(root)
+chat_gui = ChatGUI(root)
 root.mainloop()

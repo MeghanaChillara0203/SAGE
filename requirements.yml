@@ -1,0 +1,22 @@
+name: sage-ai
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9  # Ensure compatibility with all libraries
+  - pip
+  - pytorch  # Deep learning framework
+  - torchvision  # Required for PyTorch-based models
+  - torchaudio  # Required for PyTorch-based models
+  - transformers  # NLP and deep learning models
+  - datasets  # Hugging Face dataset processing
+  - sentencepiece  # Required for some tokenization models
+  - scikit-learn  # Evaluation metrics (F1-score, accuracy)
+  - nltk  # NLP processing
+  - tqdm  # Progress bars for training
+  - openai  # GPT integration
+  - requests  # API communication
+  - pip:
+      - pillow  # Image processing for GUI
+      - tk  # GUI framework (tkinter)
+      - nlpaug  # Data augmentation for better model performance
