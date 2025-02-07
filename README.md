@@ -1,89 +1,139 @@
 # **SAGE: AI-Powered Sustainability Chatbot**  
 
-SAGE (**Sustainable Advisory & Guidance Expert**) is an **AI-powered chatbot** designed to provide intelligent insights on sustainability. This project features **two versions** of SAGE:  
+SAGE (**Sustainable Advisory & Guidance Expert**) is an **AI-powered chatbot** providing intelligent insights on sustainability. It offers **two chatbot versions**:  
 
-- **DistilBERT-Based Chatbot:** Utilizes **intent recognition and NLP** for structured responses.  
-- **GPT-Powered Chatbot:** Leverages **OpenAI’s GPT-3.5 API** to generate dynamic, context-aware answers.  
+- **DistilBERT-Based Chatbot:** Uses **intent recognition and NLP** for structured responses.  
+- **GPT-Powered Chatbot:** Utilizes **OpenAI’s GPT-3.5 API** for dynamic, context-aware answers.  
 
-By comparing both versions, we analyze their **accuracy, response quality, and effectiveness** in aiding sustainability decision-making.  
+This project compares **accuracy, response quality, and effectiveness** in aiding sustainability decision-making.  
 
-🌍 Whether you're exploring **eco-friendly solutions**, **carbon footprints**, or **sustainable lifestyle choices**, SAGE has you covered!  
-
----
-
-## **Setup & Requirements**  
-
-### **Prerequisites**  
-Ensure you have the following dependencies installed:  
-
-If you're using Conda, create or update your environment:
-
-```bash
-conda env create -f requirements.yml  # For new environment
-conda env update --file requirements.yml --prune  # Update existing environment
-```
-
-If you only want to install via pip, use:
-
-```bash
-pip install -r <(echo "$(sed 's/- /--/' requirements.yml | sed 's/^dependencies:/ /g' | sed 's/pip:/ /g')")
-```
-
-**📌 Ensure you have an OpenAI API Key for GPT Mode!**  
-To use the **GPT-powered chatbot**, create an **API key** from OpenAI's website:  
-
-🔗 **Visit:** [https://platform.openai.com/signup/](https://platform.openai.com/signup/)  
-📌 **Copy your API Key and replace it in the `GPT_GUI.py` file**  
-
-```python
-openai.api_key = 'your-api-key-here'  # Replace this with your actual API key
-```
+🌍 Whether you're exploring **eco-friendly solutions**, **carbon footprints**, or **sustainable lifestyle choices**, **SAGE has you covered!**  
 
 ---
 
-## **How to Compile & Run SAGE**  
+## **📸 Chatbot Interfaces**  
 
-### **Running the Chatbot with OpenAI API**  
-For an all-in-one execution, use:  
+### **1️⃣ DistilBERT AI Chatbot (Intent-Based)**
+![DistilBERT Chatbot](images/aichatbot.png)  
+
+### **2️⃣ GPT-Powered Chatbot (OpenAI API)**
+![GPT Chatbot](images/gptchatbot.png)  
+
+### **3️⃣ Model Comparison: DistilBERT vs. GPT**
+![Chatbot Comparison](images/comparison.png)  
+
+---
+
+## **🚀 Setup & Installation**  
+
+### **📌 Prerequisites**  
+Ensure you have the necessary dependencies installed:  
+
+If you're using **Conda**, create or update your environment:  
+```bash
+conda env create -f requirements.yml  # For a new environment  
+conda env update --file requirements.yml --prune  # Update existing environment  
+```
+
+If using **pip**, install all dependencies:  
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## **💡 Running SAGE**  
+
+### **1️⃣ Setup OpenAI API Key (For GPT Version)**  
+To use the GPT-powered chatbot, **get an OpenAI API key**:  
+🔗 **Sign up at** [OpenAI API](https://platform.openai.com/signup)  
+🛠 **Set your API key in the terminal:**  
+```bash
+export OPENAI_API_KEY="your-api-key-here"
+```
+
+---
+
+### **2️⃣ Running SAGE Chatbots**  
+
+#### **Option 1: Run Everything at Once**
 ```bash
 make all
 ```
 
-### **Step-by-Step Execution**  
+#### **Option 2: Run Step by Step**  
 
-#### **1️⃣ Train the DistilBERT Chatbot**  
-Before running SAGE, train the NLP-based chatbot:  
+✅ **Train DistilBERT Chatbot (NLP Model)**  
 ```bash
 make train
 ```
 
-#### **2️⃣ Launch the DistilBERT Chatbot**  
-Once trained, start the interactive chatbot:  
+✅ **Run DistilBERT Chatbot (Intent-Based)**
 ```bash
 make chat
 ```
 
-#### **3️⃣ Use the GPT-Powered Chatbot**  
-To test the **ChatGPT-enhanced** version of SAGE:  
+✅ **Run GPT-Powered Chatbot**
 ```bash
 make gptui
 ```
 
 ---
 
-## **How SAGE Works**  
+## **📈 Training Performance & Model Insights**  
+I did 10 epochs, but you can try doing them from 5 to 7. to reduce time.
+### **📊 Training Results (DistilBERT Model)**
+| **Epoch** | **Loss** | **Accuracy** | **F1-score** |
+|-----------|---------|-------------|--------------|
+| **1/10**  | 3.1377  | 29.83%      | 29.03%       |
+| **2/10**  | 1.2033  | 72.03%      | 68.80%       |
+| **3/10**  | 0.9780  | 88.68%      | 88.09%       |
+| **4/10**  | 0.2234  | 96.07%      | 96.02%       |
+| **5/10**  | 0.1583  | 97.68%      | 97.54%       |
+| **6/10**  | 0.0810  | 98.14%      | 98.08%       |
+| **7/10**  | 0.2626  | 98.69%      | 98.65%       |
+| **8/10**  | 0.0526  | 98.77%      | 98.78%       |
+| **9/10**  | 0.2280  | 99.03%      | 99.01%       |
+| **10/10** | 0.0319  | 98.86%      | 98.84%       |
 
-SAGE operates in two modes:  
+🔹 **Training Screenshot:**  
+![Training Screenshot](figs/training.png)  
 
-### 🔹 **DistilBERT Chatbot:**  
-- Loads a **pre-trained model** and predefined **intent-response pairs**.  
-- Uses NLP classification to **predict user intent** and generate responses.  
-- Provides **structured, rule-based answers**.  
+---
 
-### 🔹 **GPT-Powered Chatbot:**  
-- Uses **OpenAI’s GPT-3.5 API** to process natural language queries.  
-- Generates **context-aware, dynamic responses** based on user input.  
-- Enhances conversation flow with **AI-driven reasoning and deeper insights**.  
+## **🔬 Understanding the Results**  
+
+📌 **Rapid learning:** Accuracy jumped from **29.8% to 88.6% in 3 epochs**  
+📌 **Stabilized performance:** After **6 epochs, accuracy reached 98%+**  
+📌 **Final accuracy: ~99%**, indicating **optimal chatbot readiness**  
+📌 **Overfitting prevention:** No additional training required  
+
+---
+
+## **🤖 How SAGE Works**  
+
+### **1️⃣ DistilBERT Chatbot (Intent-Based)**
+🔹 Uses a **pre-trained NLP model**  
+🔹 Matches **user input to predefined intents**  
+🔹 Returns **structured, rule-based answers**  
+🔹 Works **offline after training**  
+
+### **2️⃣ GPT-Powered Chatbot (OpenAI API)**
+🔹 Uses **OpenAI’s GPT model**  
+🔹 Generates **real-time, contextual responses**  
+🔹 Handles **open-ended, complex questions**  
+🔹 Requires an **active internet connection & API key**  
+
+---
+
+## **🧠 Comparison: DistilBERT vs. GPT**  
+
+| Feature                  | DistilBERT Chatbot | GPT-3.5 Chatbot |
+|--------------------------|-------------------|-----------------|
+| **Response Type**        | Rule-based        | Contextual & Dynamic |
+| **Accuracy**             | High for structured queries | Adaptive & evolving |
+| **Training Needed?**     | Yes (pre-trained NLP model) | No (API-based AI) |
+| **Best Use Case**        | Quick predefined answers | Deep, AI-driven explanations |
 
 By comparing the two models, SAGE explores the advantages of **rule-based AI** vs. **deep learning-based conversational AI** in addressing **sustainability queries**.  
 
@@ -105,43 +155,12 @@ By comparing the two models, SAGE explores the advantages of **rule-based AI** v
 
 ---
 
-## **Key Insights & Findings**  
-
-📌 **Comparison of DistilBERT & GPT Models**  
-
-| Feature                  | DistilBERT Chatbot | GPT-3.5 Chatbot |
-|--------------------------|-------------------|-----------------|
-| **Response Type**        | Rule-based        | Contextual & Dynamic |
-| **Accuracy**             | High for structured queries | Adaptive & evolving |
-| **Training Needed?**     | Yes (pre-trained NLP model) | No (API-based AI) |
-| **Best Use Case**        | Quick predefined answers | Deep, AI-driven explanations |
-
-🎯 **SAGE in Action:**  
-- 🟢 **Answered sustainability queries** effectively using **both AI techniques**.  
-- 🟢 **Compared response accuracy & quality** through user testing.  
-- 🟢 **Validated AI's role in sustainability guidance** by analyzing user interactions.  
-
----
-
 ## **Why SAGE Matters**  
 - 🌍 **Sustainability-Focused:** AI-powered insights on eco-friendly solutions.  
 - 🤖 **Machine Learning at Work:** Combines **intent recognition, NLP, and GPT AI** for better understanding.  
 - 🎯 **User-Centric Design:** A clean, intuitive chatbot experience with **two AI models for comparison**.  
 
 SAGE is more than just a chatbot—it’s a demonstration of **AI’s evolving role in sustainability education and decision-making**. 🌱💡  
-
----
-
-### **📸 Screenshots of SAGE**  
-
-#### 1️⃣ **DistilBERT Chatbot Interface**  
-![DistilBERT Chatbot](figs/sagechatbot.png)  
-
-#### 2️⃣ **GPT-Powered Chatbot Interface**  
-![GPT Chatbot](figs/gptchatbot.png)  
-
-#### 3️⃣ **Comparison: GPT vs. DistilBERT Responses**  
-![GPT vs AI Chatbot](figs/sagevsgpt.png)  
 
 ---
 
