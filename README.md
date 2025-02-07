@@ -1,5 +1,7 @@
 # **SAGE: AI-Powered Sustainability Chatbot**  
 
+---
+
 SAGE (**Sustainable Advisory & Guidance Expert**) is an **AI-powered chatbot** providing intelligent insights on sustainability. It offers **two chatbot versions**:  
 
 - **DistilBERT-Based Chatbot:** Uses **intent recognition and NLP** for structured responses.  
@@ -9,7 +11,7 @@ This project compares **accuracy, response quality, and effectiveness** in aidin
 
 🌍 Whether you're exploring **eco-friendly solutions**, **carbon footprints**, or **sustainable lifestyle choices**, **SAGE has you covered!**  
 
----
+
 
 ## **📸 Chatbot Interfaces**  
 
@@ -22,7 +24,6 @@ This project compares **accuracy, response quality, and effectiveness** in aidin
 ### **3️⃣ Model Comparison: DistilBERT vs. GPT**
 ![Chatbot Comparison](images/comparison.png)  
 
----
 
 ## **🚀 Setup & Installation**  
 
@@ -40,7 +41,7 @@ If using **pip**, install all dependencies:
 pip install -r requirements.txt
 ```
 
----
+
 
 ## **💡 Running SAGE**  
 
@@ -78,7 +79,7 @@ make chat
 make gptui
 ```
 
----
+
 
 ## **📈 Training Performance & Model Insights**  
 I did 10 epochs, but you can try doing them from 5 to 7. to reduce time.
@@ -153,7 +154,7 @@ By comparing the two models, SAGE explores the advantages of **rule-based AI** v
 - Generates **long-form, contextual answers** based on AI training data.  
 - Uses **real-time GPT interaction** instead of predefined responses.  
 
----
+
 
 ## **Why SAGE Matters**  
 - 🌍 **Sustainability-Focused:** AI-powered insights on eco-friendly solutions.  
@@ -162,11 +163,11 @@ By comparing the two models, SAGE explores the advantages of **rule-based AI** v
 
 SAGE is more than just a chatbot—it’s a demonstration of **AI’s evolving role in sustainability education and decision-making**. 🌱💡  
 
----
+
 
 🔹 **Ready to explore AI-driven sustainability? Run SAGE today!** 🚀  
 
----
+
 
 #### **Authors:** Meghana Chillara, Zach Nichols, Tina Puzzo  
 📅 **Date:** April 2023  
