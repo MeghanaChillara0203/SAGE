@@ -3,6 +3,7 @@
 SAGE (**Sustainable Advisory & Guidance Expert**) is an **AI-powered chatbot** providing intelligent insights on sustainability. It offers **two chatbot versions**:  
 
 - **DistilBERT-Based Chatbot:** Uses **intent recognition and NLP** for structured responses.  
+
 - **GPT-Powered Chatbot:** Utilizes **OpenAI’s GPT-3.5 API** for dynamic, context-aware answers.  
 
 This project compares **accuracy, response quality, and effectiveness** in aiding sustainability decision-making.  
@@ -14,21 +15,26 @@ This project compares **accuracy, response quality, and effectiveness** in aidin
 ## **📸 Chatbot Interfaces**  
 
 ### **1️⃣ DistilBERT AI Chatbot (Intent-Based)**
+
 ![DistilBERT Chatbot](figs/aichatbot.png)  
 
 ### **2️⃣ GPT-Powered Chatbot (OpenAI API)**
+
 ![GPT Chatbot](figs/gptchatbot.png)  
 
 ### **3️⃣ Model Comparison: DistilBERT vs. GPT**
+
 ![Chatbot Comparison](figs/comparison.png)  
 
 
 ## **🚀 Setup & Installation**  
 
 ### **📌 Prerequisites**  
+
 Ensure you have the necessary dependencies installed:  
 
 If you're using **Conda**, create or update your environment:  
+
 ```bash
 conda env create -f requirements.yml  # For a new environment  
 conda env update --file requirements.yml --prune  # Update existing environment  
@@ -47,6 +53,7 @@ pip install -r requirements.txt
 To use the GPT-powered chatbot, **get an OpenAI API key**:  
 🔗 **Sign up at** [OpenAI API](https://platform.openai.com/signup)  
 🛠 **Set your API key in the terminal:**  
+
 ```bash
 export OPENAI_API_KEY="your-api-key-here"
 ```
@@ -56,6 +63,7 @@ export OPENAI_API_KEY="your-api-key-here"
 ### **2️⃣ Running SAGE Chatbots**  
 
 #### **Option 1: Run Everything at Once**
+
 ```bash
 make all
 ```
@@ -63,23 +71,29 @@ make all
 #### **Option 2: Run Step by Step**  
 
 ✅ **Train DistilBERT Chatbot (NLP Model)**  
+
 ```bash
 make train
 ```
 
 ✅ **Run DistilBERT Chatbot (Intent-Based)**
+
 ```bash
 make chat
 ```
 
 ✅ **Run GPT-Powered Chatbot**
+
 ```bash
 make gptui
 ```
 
 ## **📈 Training Performance & Model Insights**  
+
 I did 10 epochs, but you can try doing them from 5 to 7. to reduce time.
+
 ### **📊 Training Results (DistilBERT Model)**
+
 | **Epoch** | **Loss** | **Accuracy** | **F1-score** |
 |-----------|---------|-------------|--------------|
 | **1/10**  | 3.1377  | 29.83%      | 29.03%       |
@@ -109,12 +123,14 @@ I did 10 epochs, but you can try doing them from 5 to 7. to reduce time.
 ## **🤖 How SAGE Works**  
 
 ### **1️⃣ DistilBERT Chatbot (Intent-Based)**
+
 🔹 Uses a **pre-trained NLP model**  
 🔹 Matches **user input to predefined intents**  
 🔹 Returns **structured, rule-based answers**  
 🔹 Works **offline after training**  
 
 ### **2️⃣ GPT-Powered Chatbot (OpenAI API)**
+
 🔹 Uses **OpenAI’s GPT model**  
 🔹 Generates **real-time, contextual responses**  
 🔹 Handles **open-ended, complex questions**  
@@ -147,7 +163,6 @@ By comparing the two models, SAGE explores the advantages of **rule-based AI** v
 - Handles **complex and open-ended queries** better than the DistilBERT model.  
 - Generates **long-form, contextual answers** based on AI training data.  
 - Uses **real-time GPT interaction** instead of predefined responses.  
-
 
 
 ## **Why SAGE Matters**  
