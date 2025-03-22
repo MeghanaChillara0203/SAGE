@@ -180,5 +180,4 @@ SAGE is more than just a chatbot—it’s a demonstration of **AI’s evolving r
 
 ---
 #### **Authors:** Meghana Chillara, Zach Nichols, Tina Puzzo  
-📅 **Date:** April 2023  
 
